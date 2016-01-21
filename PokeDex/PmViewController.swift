@@ -10,8 +10,11 @@ import UIKit
 
 class PmViewController: UITableViewController {
     var pm:PokemonMo!
+    var viewList = [UIView]()
     
     override func viewDidLoad() {
+        viewList.append(PmInfoView(pm: pm))
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -29,17 +32,18 @@ class PmViewController: UITableViewController {
 
     //1.1默认返回一组
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return viewList.count
     }
     
     // 1.2 返回行数
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return 1
     }
     
     //1.3 返回行高
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
-        return 40
+        let view = viewList[indexPath.section]
+        return view.bounds.height
     }
     
     //1.4每组的头部高度
@@ -89,16 +93,15 @@ class PmViewController: UITableViewController {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: identifier)
         }
         cell?.selectionStyle = .None
-        addButtomLine(cell!)
         
-        if(indexPath.section == 0) {
-            if(indexPath.row == 0) {
-                
-            }
-        } else {
-            
-        }
+        let view = viewList[indexPath.section]
+        view.translatesAutoresizingMaskIntoConstraints = false
+        cell?.contentView.addSubview(view)
+        let views = ["view": view]
+        cell?.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        cell?.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
         
+//        addButtomLine(cell!)
         return cell!
     }
     

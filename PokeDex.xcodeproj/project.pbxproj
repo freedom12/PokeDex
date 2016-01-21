@@ -20,6 +20,7 @@
 		396878841C43FA03005070C7 /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 396878831C43F8C4005070C7 /* data.db */; };
 		396878861C44010A005070C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 396878851C44010A005070C7 /* Assets.xcassets */; };
 		396878881C440172005070C7 /* PokemonMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396878871C440172005070C7 /* PokemonMo.swift */; };
+		39893F101C4A9C65003413A0 /* PmInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39893F0F1C4A9C65003413A0 /* PmInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,7 @@
 		396878831C43F8C4005070C7 /* data.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.db; sourceTree = "<group>"; };
 		396878851C44010A005070C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		396878871C440172005070C7 /* PokemonMo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonMo.swift; sourceTree = "<group>"; };
+		39893F0F1C4A9C65003413A0 /* PmInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PmInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				39305E981C491C31006D4BB1 /* Model.swift */,
 				39305E9A1C492098006D4BB1 /* Global.swift */,
 				393065131C495101006D4BB1 /* PmViewController.swift */,
+				39893F0F1C4A9C65003413A0 /* PmInfoView.swift */,
 			);
 			path = PokeDex;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				396878801C43F425005070C7 /* SQLiteDB.swift in Sources */,
 				396878811C43F425005070C7 /* SQLTable.swift in Sources */,
 				3968786A1C43F2C8005070C7 /* ViewController.swift in Sources */,
+				39893F101C4A9C65003413A0 /* PmInfoView.swift in Sources */,
 				393065141C495101006D4BB1 /* PmViewController.swift in Sources */,
 				396878681C43F2C8005070C7 /* AppDelegate.swift in Sources */,
 			);
