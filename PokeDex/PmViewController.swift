@@ -101,7 +101,6 @@ class PmViewController: UITableViewController {
         cell?.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
         cell?.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
         
-//        addButtomLine(cell!)
         return cell!
     }
     
